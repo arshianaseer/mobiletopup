@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,9 +8,30 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="auth.js"></script>
+
     <title>Web Design Mastery | Cash-Xpress</title>
   </head>
-  
+  <script>
+    // Check if user is authenticated
+    $(document).ready(function () {
+      checkAuth()
+        .then((isAuthenticated) => {
+          if (isAuthenticated) {
+            console.log("User is authenticated.");
+          } else {
+            console.log("User is not authenticated.");
+            window.location.href = "./login.html"; // Redirect to login page
+          }
+        })
+        .catch(() => {
+          console.log("User is not authenticated.");
+          window.location.href = "./login.html"; // Redirect to login page
+        });
+    });
+  </script>
+
   <body>
     <header>
       <nav>
@@ -43,19 +63,22 @@
       </nav>
       <div class="section__container header__container" id="home">
         <div class="header__image">
-          <img src="https://d27735ao2xxhhe.cloudfront.net/blog/pro/the-challenges-and-opportunities-of-cross-border-remittances-to-the-gambia-in-the-digital-age-1000x70064a6bf5a4509a1688649562.png" alt="header"/>
+          <img
+            src="https://d27735ao2xxhhe.cloudfront.net/blog/pro/the-challenges-and-opportunities-of-cross-border-remittances-to-the-gambia-in-the-digital-age-1000x70064a6bf5a4509a1688649562.png"
+            alt="header"
+          />
         </div>
         <div class="header__content">
           <h1>Send and receive money in minutes with Cash-Xpress</h1>
           <p>
-            Discover Cash-Xpress money transfer options in Haiti
-            Register now to get a better exchange rate and $0 fee on your first online transfer
+            Discover Cash-Xpress money transfer options in Haiti Register now to
+            get a better exchange rate and $0 fee on your first online transfer
           </p>
-           <button type="button" class="btn-crazy btn btn-lg btn-light">
-        Send money now
+          <button type="button" class="btn-crazy btn btn-lg btn-light">
+            Send money now
           </button>
-                </div>
-            </div>
+        </div>
+      </div>
     </header>
     <section class="section__container steps__container" id="rent">
       <p class="section__subheader">HOW IT WORKS</p>
@@ -65,23 +88,24 @@
           <span><i class="ri-map-pin-fill"></i></span>
           <h4>Send online</h4>
           <p>
-            Log in or sign up and create
-your profile for free to send
-money online.
+            Log in or sign up and create your profile for free to send money
+            online.
           </p>
         </div>
         <div class="steps__card">
           <span><i class="ri-calendar-check-fill"></i></span>
           <h4>Send with our app</h4>
           <p>
-           Send money, pay bills, check exchange rates, or start a transfer in the app and pay in-store-all on the go.
+            Send money, pay bills, check exchange rates, or start a transfer in
+            the app and pay in-store-all on the go.
           </p>
         </div>
         <div class="steps__card">
           <span><i class="ri-bookmark-3-fill"></i></span>
           <h4>Send in person</h4>
           <p>
-            Transfer money in person from more than 2 Cash-Xpress® U.S. agent locations3..
+            Transfer money in person from more than 2 Cash-Xpress® U.S. agent
+            locations3..
           </p>
         </div>
       </div>
@@ -89,7 +113,10 @@ money online.
 
     <section class="section__container service__container" id="service">
       <div class="service__image">
-        <img src="https://zil.us/wp-content/uploads/2022/08/Experience-The-Best-International-Money-Transfer-with-Zil-ZB.png" alt="service" />
+        <img
+          src="https://zil.us/wp-content/uploads/2022/08/Experience-The-Best-International-Money-Transfer-with-Zil-ZB.png"
+          alt="service"
+        />
       </div>
       <div class="service__content">
         <p class="section__subheader">BEST SERVICES</p>
@@ -101,9 +128,7 @@ money online.
             <span><i class="ri-price-tag-3-fill"></i></span>
             <div>
               <h4>Deals for every budget</h4>
-              <p>
-              With CASH-XPRESS, your funds arrive quickly and easily
-              </p>
+              <p>With CASH-XPRESS, your funds arrive quickly and easily</p>
             </div>
           </li>
           <li>
@@ -160,7 +185,10 @@ money online.
           <span><i class="ri-car-fill"></i></span>
           <h4>Your Choice to make someone happy</h4>
         </div>
-        <img src="https://a3e.com/wp-content/uploads/2020/10/Customer-Experience.png" alt="experience" />
+        <img
+          src="https://a3e.com/wp-content/uploads/2020/10/Customer-Experience.png"
+          alt="experience"
+        />
       </div>
     </section>
 
@@ -174,15 +202,24 @@ money online.
           </p>
           <div class="download__links">
             <a href="#">
-              <img src="https://www.gov.br/pt-br/imagens-de-servicos/apple.png" alt="app store" />
+              <img
+                src="https://www.gov.br/pt-br/imagens-de-servicos/apple.png"
+                alt="app store"
+              />
             </a>
             <a href="#">
-              <img src="https://fireship.io/lessons/pwa-to-play-store/img/googleplay-badge.png" alt="play" />
+              <img
+                src="https://fireship.io/lessons/pwa-to-play-store/img/googleplay-badge.png"
+                alt="play"
+              />
             </a>
           </div>
         </div>
         <div class="download__image">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/78/bd/15/78bd1551-b0f0-8acc-56d4-005556198794/aaef25cd-1d22-470d-ac21-1ce46846da45_hb-6.png/300x0w.jpg" alt="download" />
+          <img
+            src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/78/bd/15/78bd1551-b0f0-8acc-56d4-005556198794/aaef25cd-1d22-470d-ac21-1ce46846da45_hb-6.png/300x0w.jpg"
+            alt="download"
+          />
         </div>
       </div>
     </section>
